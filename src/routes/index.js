@@ -2,7 +2,12 @@ const express = require('express')
 const router = express.Router()
 
 
-router.get('/users')
+// controllers
+const { getTodos, getTodo } = require('../controllerss/todo')
 
+
+// router
+router.get('/todos', getTodos)
+router.get('/todo/:id', getTodo)
 
 module.exports = router
