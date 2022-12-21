@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+const dotenv = require('dotenv');
+dotenv.config()
+const port = process.env.PORT || 5000;
 
 let todos = [
   {
